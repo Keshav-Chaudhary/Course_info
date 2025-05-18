@@ -73,7 +73,7 @@ def tags():
     sorted_tags = dict(sorted(tag_to_courses.items(), key=lambda x: x[0].lower()))
     return render_template("tags.html", tag_to_courses=sorted_tags, selected_semester=selected_semester)
 
-@app.route("/tag/<tag_name>")
+@app.route("/tag/<path:tag_name>")
 def tag_filter(tag_name):
     filtered_courses = [
         c for c in COURSES
