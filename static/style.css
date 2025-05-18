@@ -1,0 +1,159 @@
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.course-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 1rem; /* rounded-2xl */
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Title styling */
+.course-card h3 {
+  font-size: 1.125rem; /* text-xl */
+  font-weight: 600;
+  color: #111827; /* gray-900 */
+  margin-bottom: 0.5rem;
+}
+
+/* Info list */
+.course-info {
+  font-size: 0.875rem; /* text-sm */
+  color: #374151; /* gray-700 */
+  margin-bottom: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-info li {
+  margin-bottom: 0.25rem;
+}
+
+/* Badge section */
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+/* Define colors per type */
+.type-csam-core {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+.type-cse-elective {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.type-csam-special-elective {
+  background-color: #ede9fe;
+  color: #6b21a8;
+}
+
+.type-cse-csb-core {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.type-cse{
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.type-ece-core {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.type-csai {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.type-csd-maths-elective {
+  background-color: #fce7f3;
+  color: #9d174d;
+}
+
+.type-ece-csai-core {
+  background-color: #ffedd5;
+  color: #c2410c;
+}
+
+.type-ent {
+  background-color: #ccfbf1;
+  color: #115e59;
+}
+
+.type-ssh {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+
+
+
+/* Container and layout */
+section {
+  background: #f9fafb; /* light off-white background */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  padding: 1.5rem 2rem;
+  transition: box-shadow 0.3s ease;
+}
+section:hover {
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+}
+
+/* Headings */
+h1, h2 {
+  transition: color 0.3s ease;
+}
+h1:hover {
+  color: #2563eb; /* blue-600 from Tailwind */
+}
+h2:hover {
+  color: #3b82f6; /* blue-500 from Tailwind */
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.6;
+  color: #374151; /* gray-700 */
+  transition: color 0.25s ease;
+}
+p:hover {
+  color: #1f2937; /* gray-900 */
+}
+
+/* Lists */
+ul {
+  margin-left: 1.2rem;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Important text */
+.text-red-600 {
+  transition: color 0.3s ease;
+}
+.text-red-600:hover {
+  color: #b91c1c; /* darker red */
+}

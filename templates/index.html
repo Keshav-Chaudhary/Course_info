@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Home - Filter Courses{% endblock %}
+
+{% block content %}
+<form method="POST" class="mb-8 max-w-xl mx-auto flex flex-col sm:flex-row sm:items-end sm:gap-4 flex-wrap">
+  <div class="flex-1 min-w-[200px]">
+    <label for="branch" class="block text-sm font-medium text-gray-700 mb-1">Select Branch:</label>
+    <select name="branch" id="branch" class="border border-gray-300 rounded px-3 py-2 w-full max-w-xs">
+      <option value="">-- Select Branch --</option>
+      {% for branch in ['CSE', 'CSAM', 'CSAI', 'CSB', 'CSD', 'ECE', 'CSSS', 'EVE'] %}
+        <option value="{{ branch }}" {% if selected_branch == branch %}selected{% endif %}>{{ branch }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="flex-1 min-w-[200px] mt-4 sm:mt-0">
+    <label for="semester" class="block text-sm font-medium text-gray-700 mb-1">Select Semester:</label>
+    <select name="semester" id="semester" class="border border-gray-300 rounded px-3 py-2 w-full max-w-xs">
+      <option value="">-- Select Semester --</option>
+      {% for sem in ['1', '2', '3', '4', '5', '6', '7', '8'] %}
+        <option value="{{ sem }}" {% if selected_semester == sem %}selected{% endif %}>{{ sem }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="mt-4 sm:mt-0 sm:self-end">
+    <button type="submit"
+            class="w-28 sm:w-32 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+      Filter
+    </button>
+  </div>
+</form>
+
+
+{% if error_message %}
+  <p class="text-red-600 font-semibold mt-4 text-center sm:text-left">{{ error_message }}</p>
+{% elif not selected_branch and not selected_semester %}
+  <p class="text-gray-600 mt-4 text-center sm:text-left">Please select a branch and semester to view courses.</p>
+{% elif selected_branch and not grouped_courses %}
+  <p class="text-gray-600 mt-4 text-center sm:text-left">No courses found for branch: <strong>{{ selected_branch }}</strong>{% if selected_semester %} in semester {{ selected_semester }}{% endif %}.</p>
+{% elif selected_branch and grouped_courses %}
+  <p class="mb-4 font-medium text-gray-800 text-center sm:text-left">
+    Showing courses for branch: <strong>{{ selected_branch }}</strong>{% if selected_semester %} in semester {{ selected_semester }}{% endif %}
+  </p>
+{% endif %}
+
+{% if grouped_courses %}
+    {% for group_code, courses in grouped_courses.items() %}
+        <section class="mt-12 max-w-6xl mx-auto">
+            <h2 class="text-xl font-semibold text-gray-800 mb-6 border-b pb-1">Group {{ loop.index }} Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for course in courses %}
+                <div class="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        {{ course['Course_Name'] or 'Untitled Course' }}
+                    </h3>
+
+                    <p class="text-sm text-gray-700 mb-1">
+                        <span class="font-medium text-gray-800">Code:</span> {{ course['Course_Code'] or 'N/A' }}
+                    </p>
+
+                    <p class="text-sm text-gray-700 mb-1">
+                        <span class="font-medium text-gray-800">Instructor:</span> {{ course['Instructor'] or 'TBA' }}
+                    </p>
+
+                    <p class="text-sm text-gray-700 mb-3">
+                        <span class="font-medium text-gray-800">Credits:</span> {{ course['Credits'] or 'N/A' }}
+                    </p>
+
+                    {% if course['Mandatory_Elective'] %}
+                    <div class="flex items-start gap-2 flex-wrap text-sm text-gray-700">
+                        <span class="font-medium text-gray-800">Type:</span>
+                        {% for tag in course['Mandatory_Elective'].split(',') %}
+                            {% set tag_class = 'type-' + tag.strip().lower().replace(' ', '-').replace(':', '').replace('/', '-') %}
+                            <a href="{{ url_for('tag_filter', tag_name=tag.strip()) }}">
+                                <span class="badge {{ tag_class }}">{{ tag.strip() }}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}{{ course['Course_Name'] }} Details{% endblock %}
+
+{% block content %}
+<h2 class="text-3xl font-bold mb-6 text-center text-gray-900">{{ course['Course_Name'] }}</h2>
+
+<div class="max-w-3xl mx-auto bg-white rounded-2xl border border-gray-200 shadow-sm p-8 space-y-6">
+  <ul class="space-y-4 text-gray-800">
+    <li>
+      <span class="font-semibold text-gray-900">Course Code:</span>
+      <span>{{ course['Course_Code'] }}</span>
+    </li>
+    <li>
+      <span class="font-semibold text-gray-900">Instructor:</span>
+      <span>{{ course['Instructor'] }}</span>
+    </li>
+    <li>
+      <span class="font-semibold text-gray-900">Credits:</span>
+      <span>{{ course['Credits'] }}</span>
+    </li>
+    <li>
+      <span class="font-semibold text-gray-900">Offered To:</span>
+      <span>{{ course.get('Course_Offered_To', 'N/A') }}</span>
+    </li>
+
+    <li>
+      <span class="font-semibold text-gray-900">Mandatory/Elective:</span>
+      <div class="mt-1 flex flex-wrap gap-2 text-sm text-gray-700">
+        {% for tag in course['Mandatory_Elective'].split(',') %}
+          {% set tag_clean = tag.strip() %}
+          {% set tag_class = 'type-' + tag_clean.lower().replace(' ', '-').replace(':', '').replace('/', '-') %}
+          <a href="{{ url_for('tag_filter', tag_name=tag_clean) }}">
+            <span class="badge {{ tag_class }} px-3 py-1 rounded-full cursor-pointer select-none">
+              {{ tag_clean }}
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </li>
+
+    {% if course.get('Prerequisites') %}
+    <li>
+      <span class="font-semibold text-gray-900">Prerequisites:</span>
+      <ul class="list-disc list-inside ml-5 mt-1 text-gray-700 space-y-1">
+        {% if course['Prerequisites'].get('Mandatory') %}
+          <li>
+            <em class="font-semibold">Mandatory:</em>
+            <ul class="list-disc list-inside ml-5 mt-1 space-y-1">
+              {% for pre in course['Prerequisites']['Mandatory'] %}
+                <li>{{ pre }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endif %}
+        {% if course['Prerequisites'].get('Desirable') %}
+          <li>
+            <em class="font-semibold">Desirable:</em>
+            <ul class="list-disc list-inside ml-5 mt-1 space-y-1">
+              {% for pre in course['Prerequisites']['Desirable'] %}
+                <li>{{ pre }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endif %}
+      </ul>
+    </li>
+    {% endif %}
+
+    {% if course.get('Description') %}
+    <li>
+      <span class="font-semibold text-gray-900">Description:</span>
+      <p class="mt-1 text-gray-700">{{ course['Description'] }}</p>
+    </li>
+    {% endif %}
+
+    {% if course.get('Semester') %}
+    <li>
+      <span class="font-semibold text-gray-900">Semester:</span>
+      <span>{{ course['Semester'] }}</span>
+    </li>
+    {% endif %}
+  </ul>
+
+  {% if course.get('Learning_Outcomes') %}
+  <div>
+    <h3 class="text-xl font-semibold mb-3 text-gray-900">Learning Outcomes</h3>
+    <ul class="list-disc list-inside text-gray-700 space-y-1 ml-5">
+      {% for outcome in course['Learning_Outcomes'] %}
+        <li>{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="mt-8 text-center">
+    <a href="{{ url_for('tag_filter', tag_name=course['Mandatory_Elective'].split(',')[0].strip()) }}"
+       class="inline-block text-blue-600 hover:underline font-medium">
+      ← Back to Courses
+    </a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,307 @@
+[
+    {
+        "Mandatory_Elective": "CSB-Core",
+        "Course_Code": "BIO211",
+        "Course_Name": "Cell Biology and Biochemistry",
+        "Instructor": "Jaspreet Kaur",
+        "Credits": 4,
+        "Acronym": "CBB",
+        "Programs": {
+            "CSB": "CSB4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSB-Core",
+        "Course_Code": "BIO214",
+        "Course_Name": "Genetics and Molecular Biology",
+        "Instructor": "Gaurav Ahuja",
+        "Credits": 4,
+        "Acronym": "GMB",
+        "Programs": {
+            "CSB": "CSB5"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSSS, CSE Core",
+        "Course_Code": "CSE121",
+        "Course_Name": "Discrete Mathematics",
+        "Instructor": "Bapi Chatterjee",
+        "Credits": 4,
+        "Acronym": "DM",
+        "Programs": {
+            "CSE": "CSE3",
+            "CSSS": "CSSS3"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSE-CSB-Core, CSAM-Special Elective",
+        "Course_Code": "CSE201",
+        "Course_Name": "Advanced Programming - Sec A",
+        "Instructor": "Arun Balaji Buduru",
+        "Credits": 4,
+        "Acronym": "AP Sec A",
+        "Programs": {
+            "CSE": "CSE1",
+            "CSAM": "CSAM4",
+            "CSB": "CSB2"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSAI, CSD, CSSS-Core, ECE (Elective)",
+        "Course_Code": "CSE201",
+        "Course_Name": "Advanced Programming - Sec B",
+        "Instructor": "Sambuddho Chakravarty",
+        "Credits": 4,
+        "Acronym": "AP Sec B",
+        "Programs": {
+            "CSD": "CSD3",
+            "ECE": "ECE5",
+            "CSAI": "CSAI1",
+            "CSSS": "CSSS4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSAM-Core, CSE",
+        "Course_Code": "CSE231",
+        "Course_Name": "Operating Systems - Sec A",
+        "Instructor": "Vivek Kumar",
+        "Credits": 4,
+        "Acronym": "OS Sec A",
+        "Programs": {
+            "CSE": "CSE2",
+            "CSAM": "CSAM2"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSAI, CSD, CSSS, CSB-Core",
+        "Course_Code": "CSE231",
+        "Course_Name": "Operating Systems - Sec B",
+        "Instructor": "V. Raghava Mutharaju",
+        "Credits": 4,
+        "Acronym": "OS Sec B",
+        "Programs": {
+            "CSAI": "CSAI2",
+            "CSD": "CSD1",
+            "CSSS": "CSSS1",
+            "CSB": "CSB1"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSD-Core",
+        "Course_Code": "DES201",
+        "Course_Name": "Design Processes and Perspectives",
+        "Instructor": "Anmol Srivastava",
+        "Credits": 4,
+        "Acronym": "DPP",
+        "Programs": {
+            "CSD": "CSD4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "ECE-Core, CSE Elective, CSD-Maths Elective",
+        "Course_Code": "MTH203",
+        "Course_Name": "Math III (Sec A)",
+        "Instructor": "Satish Pandey",
+        "Credits": 4,
+        "Acronym": "M-III (Sec A)",
+        "Programs": {
+            "CSE": "CSE4",
+            "ECE": "ECE4",
+            "CSD": "CSD5"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSAI, CSSS, CSB-Core",
+        "Course_Code": "MTH203",
+        "Course_Name": "Math III (Sec B)",
+        "Instructor": "Sarthok Sircar",
+        "Credits": 4,
+        "Acronym": "M-III (Sec B)",
+        "Programs": {
+            "CSAI": "CSAI4",
+            "CSSS": "CSSS5",
+            "CSB": "CSB3",
+            "EVE": "EVE4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSAI, CSAM-Core , CSD-Maths Elective",
+        "Course_Code": "MTH210",
+        "Course_Name": "Discrete Structures",
+        "Instructor": "Ashish Kumar Pandey",
+        "Credits": 4,
+        "Acronym": "DS",
+        "Programs": {
+            "CSAI": "CSAI3",
+            "CSAM": "CSAM4",
+            "CSD": "CSD5",
+            "CSE": "CSE4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSE-Elective, CSAM-Special Elective",
+        "Course_Code": "MTH211",
+        "Course_Name": "Number Theory",
+        "Instructor": "Debika Banerjee",
+        "Credits": 4,
+        "Acronym": "NT",
+        "Programs": {
+            "CSAM": "CSAM4",
+            "CSE": "CSE4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSAM-Core, CSE-Elective",
+        "Course_Code": "MTH240",
+        "Course_Name": "Real Analysis I",
+        "Instructor": "Nabanita Ray",
+        "Credits": 4,
+        "Acronym": "RA-I",
+        "Programs": {
+            "CSAM": "CSAM1",
+            "CSE": "CSE4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "ECE-Core",
+        "Course_Code": "ECE215",
+        "Course_Name": "Circuit Theory and Devices",
+        "Instructor": "Pragya Kosta",
+        "Credits": 4,
+        "Acronym": "CTD",
+        "Programs": {
+            "ECE": "ECE1",
+            "CSAM": "CSAM1"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "ECE-CSAI-Core, CSE-Elective, CSAM-Special Elective",
+        "Course_Code": "ECE250",
+        "Course_Name": "Signals & Systems",
+        "Instructor": "Anubha Gupta",
+        "Credits": 4,
+        "Acronym": "S&S",
+        "Programs": {
+            "CSE": "CSE4",
+            "ECE": "ECE3",
+            "CSAM": "CSAM4",
+            "CSAI": "CSAI5",
+            "EVE": "EVE3"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "ECE-Core, CSE-Elective",
+        "Course_Code": "ECE270",
+        "Course_Name": "Embedded Logic Design",
+        "Instructor": "Sumit Darak",
+        "Credits": 4,
+        "Acronym": "ELD",
+        "Programs": {
+            "ECE": "ECE2",
+            "CSE": "CSE4"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "CSSS, CSD-Core, SSH Elective",
+        "Course_Code": "SSH201",
+        "Course_Name": "Research Methods in Social Sciences and Design",
+        "Instructor": "Mrinmoy Chakrabarty, Gayatri Nair, Venkata Ratandeep Suri, Souvik Dutta",
+        "Credits": 4,
+        "Acronym": "RMSSD",
+        "Programs": {
+            "CSD": "CSD2",
+            "CSSS": "CSSS2"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "ENT",
+        "Course_Code": "ENT201",
+        "Course_Name": "Foundations of Entrepreneurship",
+        "Instructor": "Anupam Saromwala",
+        "Credits": 4,
+        "Acronym": "FOE",
+        "Programs": {
+            "CSE": "CSE5",
+            "ECE": "ECE5",
+            "CSAM": "CSAM5",
+            "EVE": "EVE5"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "ENT",
+        "Course_Code": "ENT202",
+        "Course_Name": "Social Entrepreneurship",
+        "Instructor": "Nair, Venkata Ratandeep Suri",
+        "Credits": 4,
+        "Acronym": "SoE",
+        "Programs": {
+            "CSE": "CSE5",
+            "ECE": "ECE5",
+            "CSAM": "CSAM5",
+            "EVE": "EVE5"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "SSH",
+        "Course_Code": "SSH240",
+        "Course_Name": "Politics in Digital Era",
+        "Instructor": "Jyoti Sharma",
+        "Credits": 4,
+        "Acronym": "PDE",
+        "Programs": {
+            "CSE": "CSE5",
+            "ECE": "ECE5",
+            "CSAM": "CSAM5",
+            "EVE": "EVE5"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "SSH",
+        "Course_Code": "SOC216",
+        "Course_Name": "Political Anthropology: State, Subject, Power",
+        "Instructor": "Aasim Khan",
+        "Credits": 4,
+        "Acronym": "PASP",
+        "Programs": {
+            "ECE": "ECE5",
+            "CSAM": "CSAM5",
+            "EVE": "EVE5"
+        },
+        "Semester": 3
+    },
+    {
+        "Mandatory_Elective": "SSH",
+        "Course_Code": "SSH221",
+        "Course_Name": "Social & Political Philosophy",
+        "Instructor": "Deepak Prince",
+        "Credits": 4,
+        "Acronym": "SPP",
+        "Programs": {
+            "ECE": "ECE5",
+            "CSAM": "CSAM5",
+            "EVE": "EVE5"
+        },
+        "Semester": 3
+    }
+    
+]

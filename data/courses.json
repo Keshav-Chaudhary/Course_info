@@ -1,0 +1,253 @@
+[
+  {
+    "Mandatory_Elective": "CSB-Core",
+    "Course_Code": "BIO211",
+    "Course_Name": "Cell Biology and Biochemistry",
+    "Instructor": "Jaspreet Kaur",
+    "Credits": 4,
+    "Acronym": "CBB",
+    "Programs": {
+      "CSB": "CSB4"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "An in-depth study of cellular structures and biochemical processes fundamental to life.",
+    "Prerequisites": {
+      "Mandatory": ["Basic Chemistry"],
+      "Desirable": ["Intro to Biology"]
+    },
+    "Learning_Outcomes": [
+      "Understand cell structure and function.",
+      "Explain biochemical pathways.",
+      "Apply knowledge in lab experiments."
+    ]
+  },
+  {
+    "Mandatory_Elective": "CSSS, CSE Core",
+    "Course_Code": "CSE121",
+    "Course_Name": "Discrete Mathematics",
+    "Instructor": "Bapi Chatterjee",
+    "Credits": 4,
+    "Acronym": "DM",
+    "Programs": {
+      "CSE": "CSE3",
+      "CSSS": "CSSS3"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Fundamentals of logic, set theory, combinatorics, graph theory, and algorithms.",
+    "Prerequisites": {
+      "Mandatory": [],
+      "Desirable": ["Mathematics I"]
+    },
+    "Learning_Outcomes": [
+      "Apply logic and proof techniques.",
+      "Solve combinatorial problems.",
+      "Analyze discrete structures."
+    ]
+  },
+  {
+    "Mandatory_Elective": "CSE-CSB-Core, CSAM-Special Elective",
+    "Course_Code": "CSE201",
+    "Course_Name": "Advanced Programming - Sec A",
+    "Instructor": "Arun Balaji Buduru",
+    "Credits": 4,
+    "Acronym": "AP Sec A",
+    "Programs": {
+      "CSE": "CSE1",
+      "CSAM": "CSAM4",
+      "CSB": "CSB2"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Advanced concepts in programming, focusing on data structures and algorithms.",
+    "Prerequisites": {
+      "Mandatory": ["Programming Fundamentals"],
+      "Desirable": ["Discrete Mathematics"]
+    },
+    "Learning_Outcomes": [
+      "Write efficient algorithms.",
+      "Implement complex data structures.",
+      "Analyze program complexity."
+    ]
+  },
+  {
+    "Mandatory_Elective": "CSAI, CSD, CSSS-Core, ECE (Elective)",
+    "Course_Code": "CSE201",
+    "Course_Name": "Advanced Programming - Sec B",
+    "Instructor": "Sambuddho Chakravarty",
+    "Credits": 4,
+    "Acronym": "AP Sec B",
+    "Programs": {
+      "CSD": "CSD3",
+      "ECE": "ECE5",
+      "CSAI": "CSAI1",
+      "CSSS": "CSSS4"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Continuation of Advanced Programming focusing on software design and testing.",
+    "Prerequisites": {
+      "Mandatory": ["Programming Fundamentals"],
+      "Desirable": ["Data Structures"]
+    },
+    "Learning_Outcomes": [
+      "Design modular software.",
+      "Implement testing strategies.",
+      "Debug complex applications."
+    ]
+  },
+  {
+    "Mandatory_Elective": "CSAI, CSD, CSSS, CSB-Core",
+    "Course_Code": "CSE231",
+    "Course_Name": "Operating Systems - Sec B",
+    "Instructor": "V. Raghava Mutharaju",
+    "Credits": 4,
+    "Acronym": "OS Sec B",
+    "Programs": {
+      "CSAI": "CSAI2",
+      "CSD": "CSD1",
+      "CSSS": "CSSS1",
+      "CSB": "CSB1"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Operating system principles, services, and programming including process management and synchronization.",
+    "Prerequisites": {
+      "Mandatory": ["CSE102 Data Structures & Algorithms"],
+      "Desirable": ["C Programming"]
+    },
+    "Learning_Outcomes": [
+      "Analyze OS concepts.",
+      "Understand process synchronization.",
+      "Implement OS mechanisms."
+    ]
+  },
+  {
+    "Mandatory_Elective": "ECE-Core, CSE Elective, CSD-Maths Elective",
+    "Course_Code": "MTH203",
+    "Course_Name": "Math III (Sec A)",
+    "Instructor": "Satish Pandey",
+    "Credits": 4,
+    "Acronym": "M-III (Sec A)",
+    "Programs": {
+      "CSE": "CSE4",
+      "ECE": "ECE4",
+      "CSD": "CSD5"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Advanced calculus and linear algebra applications in engineering.",
+    "Prerequisites": {
+      "Mandatory": ["Calculus I & II"],
+      "Desirable": []
+    },
+    "Learning_Outcomes": [
+      "Apply calculus to engineering problems.",
+      "Use linear algebra for systems.",
+      "Solve differential equations."
+    ]
+  },
+  {
+    "Mandatory_Elective": "CSAI, CSAM-Core , CSD-Maths Elective",
+    "Course_Code": "MTH210",
+    "Course_Name": "Discrete Structures",
+    "Instructor": "Ashish Kumar Pandey",
+    "Credits": 4,
+    "Acronym": "DS",
+    "Programs": {
+      "CSAI": "CSAI3",
+      "CSAM": "CSAM4",
+      "CSD": "CSD5",
+      "CSE": "CSE4"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Study of discrete mathematical structures important for computer science.",
+    "Prerequisites": {
+      "Mandatory": ["Discrete Mathematics"],
+      "Desirable": []
+    },
+    "Learning_Outcomes": [
+      "Understand graph theory concepts.",
+      "Analyze combinatorics problems.",
+      "Apply logic in computing."
+    ]
+  },
+  {
+    "Mandatory_Elective": "CSAM-Core, CSE-Elective",
+    "Course_Code": "MTH240",
+    "Course_Name": "Real Analysis I",
+    "Instructor": "Nabanita Ray",
+    "Credits": 4,
+    "Acronym": "RA-I",
+    "Programs": {
+      "CSAM": "CSAM1",
+      "CSE": "CSE4"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Introduction to real analysis focusing on sequences, series, and continuity.",
+    "Prerequisites": {
+      "Mandatory": ["Calculus II"],
+      "Desirable": ["Mathematical Maturity"]
+    },
+    "Learning_Outcomes": [
+      "Prove convergence of sequences.",
+      "Understand continuity and limits.",
+      "Apply real analysis in proofs."
+    ]
+  },
+  {
+    "Mandatory_Elective": "ECE-CSAI-Core, CSE-Elective, CSAM-Special Elective",
+    "Course_Code": "ECE250",
+    "Course_Name": "Signals & Systems",
+    "Instructor": "Anubha Gupta",
+    "Credits": 4,
+    "Acronym": "S&S",
+    "Programs": {
+      "CSE": "CSE4",
+      "ECE": "ECE3",
+      "CSAM": "CSAM4",
+      "CSAI": "CSAI5",
+      "EVE": "EVE3"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Concepts of signal processing and system analysis in engineering.",
+    "Prerequisites": {
+      "Mandatory": ["Linear Algebra"],
+      "Desirable": ["Calculus III"]
+    },
+    "Learning_Outcomes": [
+      "Analyze signals in time and frequency domain.",
+      "Understand system response.",
+      "Apply transforms in engineering problems."
+    ]
+  },
+  {
+    "Mandatory_Elective": "SSH",
+    "Course_Code": "SSH221",
+    "Course_Name": "Social & Political Philosophy",
+    "Instructor": "Deepak Prince",
+    "Credits": 4,
+    "Acronym": "SPP",
+    "Programs": {
+      "ECE": "ECE5",
+      "CSAM": "CSAM5",
+      "EVE": "EVE5"
+    },
+    "Semester": 3,
+    "Course_Offered_To": "UG",
+    "Description": "Study of philosophical approaches to social and political issues.",
+    "Prerequisites": {
+      "Mandatory": [],
+      "Desirable": []
+    },
+    "Learning_Outcomes": [
+      "Critically analyze political theories.",
+      "Understand social justice concepts.",
+      "Discuss philosophical debates."
+    ]
+  }
+]

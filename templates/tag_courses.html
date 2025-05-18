@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Courses under {{ tag_name }}{% endblock %}
+
+{% block content %}
+{% set tag_class = 'type-' + tag_name.strip().lower().replace(' ', '-').replace(':', '').replace('/', '-') %}
+
+<h2 class="text-2xl font-bold mb-12 text-center text-gray-900">
+  Courses under <span class="badge {{ tag_class }} text-base px-3 py-1 rounded-full">{{ tag_name }}</span>
+</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  {% for course in courses %}
+    <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between h-full">
+      <div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">{{ course['Course_Name'] }}</h3>
+        <ul class="text-sm text-gray-700 space-y-1 mb-5">
+          <li><span class="font-medium text-gray-800">Code:</span> {{ course['Course_Code'] }}</li>
+          <li><span class="font-medium text-gray-800">Instructor:</span> {{ course['Instructor'] }}</li>
+          <li><span class="font-medium text-gray-800">Credits:</span> {{ course['Credits'] }}</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mt-auto">
+        {% for tag in course['Mandatory_Elective'].split(',') %}
+          {% set tag_clean = tag.strip() %}
+          {% set tag_class = 'type-' + tag_clean.lower().replace(' ', '-').replace(':', '').replace('/', '-') %}
+          <a href="{{ url_for('tag_filter', tag_name=tag_clean) }}">
+            <span class="badge {{ tag_class }}">{{ tag_clean }}</span>
+          </a>
+        {% endfor %}
+      </div>
+
+      <div class="flex justify-end mt-4">
+        <a href="{{ url_for('course_detail', course_code=course['Course_Code']) }}" 
+           class="text-blue-600 hover:underline font-semibold text-sm">
+          View Details →
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

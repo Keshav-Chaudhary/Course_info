@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Course Tags & Colors{% endblock %}
+
+{% block content %}
+<h2 class="text-2xl font-bold mb-6 text-center">All Course Tags</h2>
+
+<form method="GET" action="{{ url_for('tags') }}" class="max-w-xs mx-auto mb-6 flex gap-2">
+  <label for="semester" class="sr-only">Select Semester</label>
+  <select name="semester" id="semester" class="border border-gray-300 rounded px-3 py-2 w-full">
+    <option value="" {% if not selected_semester %}selected{% endif %}>-- All Semesters --</option>
+    {% for sem in ['1','2','3','4','5','6','7','8'] %}
+      <option value="{{ sem }}" {% if selected_semester == sem %}selected{% endif %}>Semester {{ sem }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Filter</button>
+</form>
+
+{% if not tag_to_courses %}
+  <p class="text-center text-gray-600 italic">No course tags available for the selected semester.</p>
+{% else %}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {% for tag, course_names in tag_to_courses.items() %}
+          {# Defensive: Ensure tag is string and safe for CSS class #}
+          {% set clean_tag = tag|string %}
+          {% set tag_class = 'type-' + clean_tag.strip()
+            .lower()
+            .replace(' ', '-')
+            .replace(':', '')
+            .replace('/', '-')
+            .replace('&', 'and')
+            .replace('.', '') %}
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200">
+              <div class="mb-4">
+                  <span class="badge {{ tag_class }} text-sm px-3 py-1 inline-block rounded-full break-words max-w-full" title="{{ tag }}">{{ tag }}</span>
+              </div>
+              {% if course_names %}
+                <ul class="list-disc list-inside text-sm text-gray-800 space-y-1 max-h-48 overflow-auto">
+                    {% for name in course_names %}
+                        {# Defensive: Make sure name is string and truncate if too long #}
+                        <li title="{{ name }}">{{ name|truncate(50, True, '...') }}</li>
+                    {% endfor %}
+                </ul>
+              {% else %}
+                <p class="text-gray-500 italic">No courses under this tag.</p>
+              {% endif %}
+          </div>
+      {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}
