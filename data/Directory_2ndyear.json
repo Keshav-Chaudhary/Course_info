@@ -24,7 +24,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "CSSS, CSE Core",
+        "Mandatory_Elective": "CSSS, CSE-Core",
         "Course_Code": "CSE121",
         "Course_Name": "Discrete Mathematics",
         "Instructor": "Bapi Chatterjee",
@@ -37,7 +37,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "CSE-CSB-Core, CSAM-Special Elective",
+        "Mandatory_Elective": "CSE-CSB-Core, CSAM-Special-Elective",
         "Course_Code": "CSE201",
         "Course_Name": "Advanced Programming - Sec A",
         "Instructor": "Arun Balaji Buduru",
@@ -51,7 +51,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "CSAI, CSD, CSSS-Core, ECE (Elective)",
+        "Mandatory_Elective": "CSAI, CSD, CSSS-Core, ECE-(Elective)",
         "Course_Code": "CSE201",
         "Course_Name": "Advanced Programming - Sec B",
         "Instructor": "Sambuddho Chakravarty",
@@ -106,7 +106,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "ECE-Core, CSE Elective, CSD-Maths Elective",
+        "Mandatory_Elective": "ECE-Core, CSE-Elective, CSD-Maths-Elective",
         "Course_Code": "MTH203",
         "Course_Name": "Math III (Sec A)",
         "Instructor": "Satish Pandey",
@@ -135,7 +135,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "CSAI, CSAM-Core , CSD-Maths Elective",
+        "Mandatory_Elective": "CSAI, CSAM-Core, CSD-Maths-Elective",
         "Course_Code": "MTH210",
         "Course_Name": "Discrete Structures",
         "Instructor": "Ashish Kumar Pandey",
@@ -150,7 +150,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "CSE-Elective, CSAM-Special Elective",
+        "Mandatory_Elective": "CSE-Elective, CSAM-Special-Elective",
         "Course_Code": "MTH211",
         "Course_Name": "Number Theory",
         "Instructor": "Debika Banerjee",
@@ -189,7 +189,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "ECE-CSAI-Core, CSE-Elective, CSAM-Special Elective",
+        "Mandatory_Elective": "ECE-CSAI-Core, CSE-Elective, CSAM-Special-Elective",
         "Course_Code": "ECE250",
         "Course_Name": "Signals & Systems",
         "Instructor": "Anubha Gupta",
@@ -218,7 +218,7 @@
         "Semester": 3
     },
     {
-        "Mandatory_Elective": "CSSS, CSD-Core, SSH Elective",
+        "Mandatory_Elective": "CSSS, CSD-Core, SSH-Elective",
         "Course_Code": "SSH201",
         "Course_Name": "Research Methods in Social Sciences and Design",
         "Instructor": "Mrinmoy Chakrabarty, Gayatri Nair, Venkata Ratandeep Suri, Souvik Dutta",
@@ -303,5 +303,4 @@
         },
         "Semester": 3
     }
-    
 ]
